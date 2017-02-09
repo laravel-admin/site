@@ -37,8 +37,15 @@ class Site
             if ($default && isset($this->data[$default])) {
                 return is_array($this->data[$default]) ? collect($this->data[$default]) : $this->data[$default];
             }
+            if (!empty($default)) {
+                return is_array($default) ? collect($default) : $default;
+            }
 
-            return is_array($default) ? collect($default) : $default;
+            if (isset($this->data[$key])) {
+                return is_array($this->data[$key]) ? collect($this->data[$key]) : $this->data[$key];
+            }
+
+            return null;
         }
 
         return is_array($this->data[$key]) ? collect($this->data[$key]) : $this->data[$key];
