@@ -1,0 +1,13 @@
+{
+    "name": "laravel-admin/site",
+    "description": "Container for Laravel for collecting data for views",
+    "type": "laravel-library",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "require": {},
+	"autoload": {
+	   "psr-4": {
+		   "LaravelAdmin\\Site\\": "src"
+		}
+   	}
+}
