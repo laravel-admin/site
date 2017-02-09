@@ -71,7 +71,7 @@ app('site')->model($post);
 
 The container will be available in all your views as the $site variable. Use it as follow:
 
-'''
+```
 {{ $site->get('title') }}
 ```
 
